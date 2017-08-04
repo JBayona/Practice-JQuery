@@ -1,0 +1,53 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="/">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(client) app/vendor.css -->
+      <!-- bower:css -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <style>
+        #test {
+          width: auto;
+          height: auto;
+          background-color: transparent;
+        }
+        h3 {
+          margin: 0;
+        }
+        div, span, p {
+          width: 80px;
+          height: 40px;
+          float: left;
+          padding: 10px;
+          margin: 10px;
+          background-color: #EEEEEE;
+        }
+      </style>
+  </head>
+  <body>
+      <div id="test">
+        <div>This is a div</div>
+        <p>This is a p</p>
+        <span>This is a span</span>
+        <br>
+        <button type="button">I'm a button</button>
+      </div>
+      <script>
+      $(document).ready(function(){
+          //Arreglo de los elementos en el DOM
+          let elements = $("#test").find("*").css("border", "3px solid red").length;
+          console.log(elements);
+          $("body").prepend("<h1>Elements found " + elements + " in the DOM");
+      });
+      </script>
+  </body>
+</html>
