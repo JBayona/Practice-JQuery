@@ -1,0 +1,53 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="/">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(client) app/vendor.css -->
+      <!-- bower:css -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <style>
+       
+      </style>
+  </head>
+  <body>
+    <form>
+      <div>
+        <input type="radio" name="fruit" value="orange" id="orange">
+        <label for="orange">orange</label>
+      </div>
+      <div>
+        <input type="radio" name="fruit" value="apple" id="apple">
+        <label for="apple">apple</label>
+      </div>
+      <div>
+        <input type="radio" name="fruit" value="banana" id="banana">
+        <label for="banana">banana</label>
+      </div>
+      <div>
+        <input type="radio" name="test" value="testing" id="testing">
+        <label for="testing">testing</label>
+      </div>
+      <div id="log"></div>
+  </form>
+
+  <div></div>
+      <script>
+      $(document).ready(function(){
+        $("input[type ='radio'][name = 'fruit'").on('click', function(e){
+          let selectedRadio = $("input[name = 'fruit']:checked");
+          console.log(selectedRadio);
+          $("#log").text("You have selected " + selectedRadio.val() + "!");
+        });
+      });
+      </script>
+  </body>
+</html>
