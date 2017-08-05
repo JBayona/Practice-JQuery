@@ -1,0 +1,65 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="/">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(client) app/vendor.css -->
+      <!-- bower:css -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <style>
+        a {
+          display: inline-block;
+        }
+      </style>
+  </head>
+  <body>
+      <form>
+        <input type="button" value="Input Button">
+        <input id="idCheckbox" type="checkbox">
+        <label for='idCheckbox'>Checkbox 1</label>
+        <label>
+          <input type="checkbox">
+          Checkbox 2
+        </label>
+        <input type="file">
+        <input type="hidden">
+       
+        <input type="image">
+        <input type="password">
+        <input type="radio">
+       
+        <input type="reset">
+        <input type="submit">
+        <input type="text">
+       
+        <select>
+          <option>Option</option>
+        </select>
+       
+        <textarea></textarea>
+        <button>Button</button>
+    </form>
+ 
+<div></div>
+      <script>
+      $(document).ready(function(){
+        let elements = $("form input:checkbox")
+          .wrap("<span></span>") //El elemento encontrado con el selector lo mete dentro de un span
+          .parent() //Selecciona el parent que en este caso es el span ahora
+          .css({
+            background: "yellow",
+            border: "3px red solid"
+          })
+        console.log(elements);
+      });
+      </script>
+  </body>
+</html>
