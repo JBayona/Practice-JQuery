@@ -1,0 +1,37 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="/">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(client) app/vendor.css -->
+      <!-- bower:css -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <style>
+        .fot {
+          color: red;
+          font-size: 120%;
+          font-style: italic;
+        }
+      </style>
+  </head>
+      <table border="1">
+        <tr><td>TD #0</td><td>TD #1</td><td>TD #2</td></tr>
+        <tr><td>TD #3</td><td>TD #4</td><td>TD #5</td></tr>
+        <tr><td>TD #6</td><td>TD #7</td><td>TD #8</td></tr>
+      </table>
+      <script>
+      $(document).ready(function(){
+        $( "td:gt(4)" ).css( "backgroundColor", "yellow" );
+        $( "td:gt(-2)" ).css( "color", "red" );
+      });
+      </script>
+  </body>
+</html>
