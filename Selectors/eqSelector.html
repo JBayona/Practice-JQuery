@@ -1,0 +1,78 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="/">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(client) app/vendor.css -->
+      <!-- bower:css -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <style>
+       td {
+          text-align: center;
+        }
+      </style>
+  </head>
+  <body>
+    <table border="1">
+      <tr><td>TD #0</td><td>TD #1</td><td>TD #2</td></tr>
+      <tr><td>TD #3</td><td>TD #4</td><td>TD #5</td></tr>
+      <tr><td>TD #6</td><td>TD #7</td><td>TD #8</td></tr>
+    </table>
+    <div class="myClass">
+      <p>Text inside 1</p>
+      <p>Text inside 2</p>
+      <p>Text inside 3</p>
+    </div>
+    <div class="myClass">
+      <p>Anoter Text inside 1</p>
+      <p>Another Text inside 1</p>
+      <p>Another Text inside 1</p>
+    </div>  
+    <ul class="nav" id="myId">
+      <li name="first">List 1, item 1</li>
+      <li name="second">List 1, item 2</li>
+      <li name="last">List 1, item 3</li>
+    </ul>
+    <ul class="nav">
+      <li>List 2, item 1</li>
+      <li>List 2, item 2</li>
+      <li>List 2, item 3</li>
+    </ul>  
+      <script>
+      $(document).ready(function(){
+       $( "td:eq( 2 )" ).css( "color", "red" );
+       //Selecciona la segunda clase que tiene el nombre de "myClass"
+       $(".myClass:eq(1)").css("backgroundColor", "red");
+       //Selecciona el tercer hijo dentro de myclass
+       $(".myClass :eq(2)").css("backgroundColor", "blue");
+       //Usando each
+       $(".myClass").each(function(index){
+          //Index tiene los indices de los números
+          $(this).find("p:eq(2)").css("border", "3px dotted green");
+       });
+       // Applies italics to text of the second <li> within each <ul class="nav">
+      $( "ul.nav" ).each(function( index ) {
+        $( this ).find( "li:eq(1)" ).css( "fontStyle", "italic" );
+      });
+
+      // Applies red text color to descendants of <ul class="nav">
+      // for each <li> that is the second child of its parent
+      $( "ul.nav li:nth-child(2)" ).css( "color", "red" );
+      let elements = $( "div.myClass p:nth-child(2)" ).css( "color", "orange" );
+      console.log(elements);
+
+      let test = $("#myId.nav li[name='last']").text("Last item JQuery name changed!");
+      console.log(test);
+ 
+      });
+      </script>
+  </body>
+</html>
