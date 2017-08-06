@@ -1,0 +1,43 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="/">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(client) app/vendor.css -->
+      <!-- bower:css -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <style>
+        .fot {
+          color: red;
+          font-size: 120%;
+          font-style: italic;
+        }
+      </style>
+  </head>
+      <div>
+          <span>Corey,</span>
+          <span>Yehuda,</span>
+          <span>Adam,</span>
+          <span>Todd</span>
+        </div>
+        <div>
+          <b>Nobody,</b>
+          <span>Jörn,</span>
+          <span>Scott,</span>
+          <span>Timo</span>
+        </div>
+      <script>
+      $(document).ready(function(){
+        $( "span:first-of-type" ).addClass( "fot" );
+      });
+      </script>
+  </body>
+</html>
