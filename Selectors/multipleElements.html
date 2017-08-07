@@ -1,0 +1,62 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="/">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(client) app/vendor.css -->
+      <!-- bower:css -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <style>
+         b {
+          color: red;
+          font-size: 16px;
+          display: block;
+          clear:left;
+        }
+        div, span, p {
+          width: 40px;
+          height: 40px;
+          float: left;
+          margin: 10px;
+          background-color: blue;
+          padding: 3px;
+          color: white;
+        }
+      </style>
+  </head>
+      <div>div</div>
+      <p class="myClass">p class="myClass"</p>
+      <p class="notMyClass">p class="notMyClass"</p>
+      <span>span</span>
+
+      <span>span</span>
+      <p>p</p>
+      <p>p</p>
+      <div>div</div>
+      <span>span</span>
+      <p>p</p>
+      <div>div</div>
+      <b></b>
+      <script>
+      $(document).ready(function(){
+        $( "div, span, p.myClass" ).css( "border", "3px solid red" );
+
+        var list = $( "div, p, span" )
+        .map( function() {
+          return this.tagName;
+        })
+        .get()
+        .join( ", " );
+      $( "b" ).append( document.createTextNode( list ) );
+      });
+      </script>
+  </body>
+</html>
