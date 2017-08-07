@@ -1,0 +1,79 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="/">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(client) app/vendor.css -->
+      <!-- bower:css -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <style>
+         body {
+          background-color: #ccc;
+        }
+        h3 {
+          margin: .25em 0;
+        }
+        div {
+          line-height: 1.5em
+        }
+        .usa {
+          background-color: #f00;
+          color: #fff;
+        }
+        .usa .usa {
+          background-color: #fff;
+          color: #000;
+        }
+        .usa .usa .usa {
+          background-color: #00f;
+          color: #fff;
+        }
+        .spain {
+          background-color: #f00;
+          color: #ff0;
+        }
+        .spain .spain {
+          background-color: #ff0;
+          color: #f00;
+          line-height: 3em;
+        }
+        .spain .spain .spain {
+          background-color: #f00;
+          color: #ff0;
+          line-height: 1.5em;
+        }
+      </style>
+  </head>
+      <div>
+        <span>Corey,</span>
+        <span>Yehuda,</span>
+        <span>Adam,</span>
+        <span>Todd</span>
+      </div>
+      <div>
+        <span>Jörn,</span>
+        <span>Scott,</span>
+        <span>Timo,</span>
+        <b>Nobody</b>
+      </div>
+      <script>
+      $(document).ready(function(){
+        $( "span:last-of-type" )
+          .css({ color:"red", fontSize:"80%" })
+          .hover(function() {
+            $( this ).addClass( "solast" );
+          }, function() {
+            $( this ).removeClass( "solast" );
+          });
+      });
+      </script>
+  </body>
+</html>
